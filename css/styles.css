@@ -1,0 +1,143 @@
+/*Lexend Deca, Big Shoulders Display Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+
+/*background, headings, buttons*/
+--col-very-light-gray: hsl(0, 0%, 95%);
+
+ /*cards colors*/
+--col-transparent-white: hsla(0, 0%, 100%, 0.75);
+--col-very-dark-cyan: hsl(179, 100%, 13%);
+--col-dark-cyan: hsl(184, 100%, 22%);
+--col-bright-orange: hsl(31, 77%, 52%);
+
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+body{
+  background-color: var(--col-very-light-gray);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+#container{
+  background-color: var(--col-white);
+  display: flex;
+  max-width: 880px;
+}
+/*----------------------------
+------------CARDS-------------
+-----------------------------*/
+.card{
+  width:33.33%;
+  padding:40px;
+  position: relative;
+}
+/*icon*/
+.icon{
+  margin-top: 20px;
+}
+/*title*/
+.card-title{
+  color: var(--col-very-light-gray);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  
+}
+/*text*/
+.card-text{
+  color: var(--col-transparent-white);
+  line-height: 1.8;
+  font-size: 0.89rem;
+  margin-bottom: 4rem;
+}
+/*button*/
+.card-btn{
+  background-color: var(--col-transparent-white);
+  border: 2px solid var(--col-transparent-white);
+  padding: 13px 30px;
+  border-radius: 39px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 35px;
+  width: 160px;
+  letter-spacing: 1px;
+}
+
+/*CARD SEDANS*/
+#card-sedans{
+  background-color: var(--col-bright-orange);
+  border-radius:10px 0px 0px 10px;
+}
+#card-sedans .card-btn{
+  color: var(--col-bright-orange);
+}
+
+/*CARD SUVS*/
+#card-suvs{
+  background-color: var(--col-dark-cyan);
+}
+#card-suvs .card-btn{
+  color:var(--col-dark-cyan);
+}
+
+/*CARD-LUXURY*/
+#card-luxury{
+  background-color: var(--col-very-dark-cyan);
+  border-radius:0px 10px 10px 0px;
+}
+#card-luxury .card-btn{
+  color:var(--col-very-dark-cyan);
+}
+#card-sedans .card-btn:hover, 
+#card-suvs .card-btn:hover, 
+#card-luxury .card-btn:hover {
+  color:var(--col-transparent-white);
+  background-color: transparent;
+  cursor:pointer;
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media (max-width:940px){
+  #container{
+    max-width:775px;
+  }
+}
+@media (max-width:825px){
+  body{
+    padding: 4rem 2rem;
+    height:unset;
+  }
+  #container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    width:85%;
+  }
+  #card-sedans{
+    border-radius: 10px 10px 0px 0px;
+  }
+  #card-luxury{
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+@media (max-width:420px){
+  .card{
+    width: 100%;
+  }
+}
